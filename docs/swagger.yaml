@@ -1,0 +1,60 @@
+basePath: /
+consumes:
+    - application/json
+definitions:
+    CreateUserRequest:
+        properties:
+            age:
+                format: date-time
+                type: string
+            name:
+                type: string
+            street:
+                type: string
+            surname:
+                type: string
+        type: object
+    CreateUserResponse:
+        properties:
+            data:
+                additionalProperties:
+                    type: string
+                type: object
+        type: object
+host: localhost:8080
+info:
+    description: Documentation for Restful API
+    title: Service
+    version: 1.0.0
+paths:
+    /users:
+        post:
+            operationId: idCreateUser
+            parameters:
+                - in: header
+                  name: Token
+                  type: string
+                - description: Create user request.
+                  in: body
+                  name: Body
+                  schema:
+                    $ref: '#/definitions/CreateUserRequest'
+            responses:
+                "200":
+                    $ref: '#/responses/CreateUserResponse'
+            summary: Create new user with address.
+            tags:
+                - users
+produces:
+    - application/json
+responses:
+    CreateUserResponse:
+        description: ""
+        schema:
+            $ref: '#/definitions/CreateUserResponse'
+schemes:
+    - http
+securityDefinitions:
+    basic:
+        type: basic
+swagger: "2.0"

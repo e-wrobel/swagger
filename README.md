@@ -10,6 +10,6 @@ Install go-swagger:
 
 Generate swagger.json file:
 ```bash
-  SWAGGER_GENERATE_EXTENSION=false swagger generate spec -o swagger.yaml
+  SWAGGER_GENERATE_EXTENSION=false swagger generate spec -o ./docs/swagger.yaml
 ```
 

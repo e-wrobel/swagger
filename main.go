@@ -1,8 +1,8 @@
 package main
 
 import (
+	_ "github.com/e-wrobel/swagger/docs"
 	"github.com/e-wrobel/swagger/internal/handlers"
-	_ "github.com/pdrum/swagger-automation/docs"
 	"log"
 	"os"
 )

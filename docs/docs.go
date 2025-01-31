@@ -1,11 +1,11 @@
-// Package classification Hellow Hachernoon
+// Package classification Service
 //
-// Documentation for my go project
+// Documentation for Restful API
 //
 //	Schemes: http
 //	BasePath: /
 //	Version: 1.0.0
-//	Host:
+//	Host: localhost:8080
 //
 //	Consumes:
 //	- application/json

@@ -3,7 +3,7 @@ package docs
 import "github.com/e-wrobel/swagger/internal/handlers"
 import _ "github.com/pdrum/swagger-automation/api"
 
-// swagger:route POST /users users-tag idCreateUser
+// swagger:route POST /users users idCreateUser
 // Create new user with address.
 // responses:
 //   200: CreateUserResponse
@@ -16,6 +16,8 @@ type CreateUserResponseWrapper struct {
 
 // swagger:parameters CreateUserRequest idCreateUser
 type CreateUserRequestWrapper struct {
+	// in: header
+	Token string
 	// Create user request.
 	// in: body
 	Body handlers.CreateUserRequest
